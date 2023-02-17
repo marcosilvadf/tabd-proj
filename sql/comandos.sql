@@ -15,7 +15,7 @@ Mostra a media de codigo:
 SELECT SUM(codigo)/COUNT(codigo) FROM `aluno`
 
 Mostra os alunos da disciplina
-SELECT a.codigo, a.nome, d.codigo, d.cod_aluno, d.nome_disciplina
+SELECT a.codigo, a.nome AS 'nome do aluno', d.codigo, d.cod_aluno, d.nome_disciplina
 FROM aluno a, disciplina d
 WHERE a.codigo = d.cod_aluno AND a.nome LIKE 'a%'
 ORDER BY (a.nome) ASC;
